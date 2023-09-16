@@ -1,5 +1,6 @@
 # ICS-Lab
 Lab setup for practicing Industrial Control System Pentesting
+Based on the course: [Practical Industrial Control System Penetration Testing](https://www.udemy.com/course/practical-ics-pentesting/)
 
 # Virtual Machine Setup
 
