@@ -18,7 +18,7 @@ echo ""
 sudo apt-get install gem git -y
 
 echo ""
-echo "[*] Installing Tools"
+echo "${yel}[*] Installing Tools${end}"
 echo ""
 
 # Setting up folder
@@ -44,5 +44,6 @@ echo ""
 cd redpoint
 sudo cp *.nse /usr/share/nmap/scripts/
 
+cd ~
 echo ""
 echo "${grn}[+] Installation Complete!${end}"
