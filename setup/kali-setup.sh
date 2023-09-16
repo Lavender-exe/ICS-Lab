@@ -29,7 +29,13 @@ cd /opt/tools/ics
 sudo git clone https://github.com/meeas/plcscan
 sudo git clone https://github.com/tijldeneut/ICSSecurityScripts ics-security-scripts
 sudo git clone https://github.com/digitalbond/Redpoint redpoint
-sudo git clone https://github.com/SCADA-LTS/ModbusPal modbuspal
+
+sudo mkdir modbuspal
+cd modbuspal
+sudo wget https://github.com/SCADA-LTS/ModbusPal/releases/download/1.7.0/ModbusPal.jar
+sudo wget https://github.com/SCADA-LTS/ModbusPal/releases/download/1.7.0/modbuspal.xmpp
+sudo wget https://github.com/SCADA-LTS/ModbusPal/releases/download/1.7.0/modbuspal_config.xmpp
+cd ..
 
 # Install modbus-cli
 sudo gem install modbus-cli
