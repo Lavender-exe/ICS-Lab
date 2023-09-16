@@ -1,5 +1,6 @@
 # ICS-Lab
-Lab setup for practicing Industrial Control System Pentesting
+Lab setup for practicing Industrial Control System Pentesting.
+
 Based on the course: [Practical Industrial Control System Penetration Testing](https://www.udemy.com/course/practical-ics-pentesting/)
 
 # Virtual Machine Setup
@@ -39,5 +40,5 @@ Minimum:
 ### Set Adapter
 
 Do this for your offensive machine + lab server
-1. Settings -> Network -> Adapter 2 -> NAT Network & Select ICSNetwork
+1. Settings -> Network -> Adapter 2 -> NAT Network & Select `ICSNetwork`
 2. Change Promiscuous Mode to Allow VMs
