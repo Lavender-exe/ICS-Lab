@@ -16,7 +16,7 @@ Minimum:
 ### Attacker
 
 *You can use anything you'd like*
-[Kali Linux](https://kali.org)
+
 - Clone the installation script [kali-setup.sh](https://github.com/Lavender-exe/ICS-Lab/blob/main/setup/kali-setup.sh)
 - `chmod +x kali-setup.sh`
 - `./kali-setup.sh`
