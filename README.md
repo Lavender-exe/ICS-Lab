@@ -15,7 +15,7 @@ Minimum:
 
 *You can use anything you'd like*
 [Kali Linux](https://kali.org)
-- Clone the installation script [[kali-setup.sh]]
+- Clone the installation script [kali-setup.sh](https://github.com/Lavender-exe/ICS-Lab/blob/main/kali-setup.sh)
 - `chmod +x kali-setup.sh`
 - `./kali-setup.sh`
 
@@ -23,7 +23,7 @@ Minimum:
 
 [Ubuntu Server 23.04 ](https://ubuntu.com/download/server)
 - Install the minimal setup to use less resources
-- Clone the installation script [[ics-setup.sh]]
+- Clone the installation script [ics-setup.sh](https://github.com/Lavender-exe/ICS-Lab/blob/main/ics-setup.sh)
 - `chmod +x ics-setup.sh`
 - `./ics-setup.sh`
 
