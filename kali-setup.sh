@@ -4,14 +4,22 @@ grn=$'\e[1;32m'
 yel=$'\e[1;33m'
 end=$'\e[0m'
 
-echo "\n${yel}[*] System Update${end}\n"
+echo ""
+echo "${yel}[*] System Update${end}"
+echo ""
+
 sudo apt-get update -y
 sudo apt-get upgrade
 
-echo "\n${yel}[*] Installing Dependencies${end}\n"
+echo ""
+echo "${yel}[*] Installing Dependencies${end}"
+echo ""
+
 sudo apt-get install gem git -y
 
-echo "\n[*] Installing Tools\n"
+echo ""
+echo "[*] Installing Tools"
+echo ""
 
 # Setting up folder
 sudo mkdir -p /opt/tools/ics
@@ -29,8 +37,12 @@ sudo gem install modbus-cli
 # Check Install
 modbus --help
 
-echo "\n${yel}[*] Installing Nmap Scripts${end}\n"
+echo ""
+echo "${yel}[*] Installing Nmap Scripts${end}"
+echo ""
+
 cd redpoint
 sudo cp *.nse /usr/share/nmap/scripts/
 
-echo "\n${grn}[+] Installation Complete!${end}\n"
+echo ""
+echo "${grn}[+] Installation Complete!${end}"
