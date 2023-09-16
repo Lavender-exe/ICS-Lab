@@ -31,6 +31,8 @@ Minimum:
 
 ## Network
 
+### Create NAT Network
+
 1. File -> Tools -> Network Manager -> NAT Networks
 2. Right Click in the blank space and click create (or Ctrl + Shift + C)
 3. Name it `ICSNetwork`
