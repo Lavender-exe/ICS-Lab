@@ -7,9 +7,15 @@ echo """
 [4] Red Team Engagement
 """
 
-default() {conpot -f --template default;}
-guardian_ast() {conpot -f --template guardian_ast;}
-red_team() {conpot -f --template IEC104;}
+default() {
+  conpot -f --template default
+}
+guardian_ast() {
+  conpot -f --template guardian_ast
+}
+red_team() {
+  conpot -f --template IEC104
+}
 
 echo "Choose Honeypot"
 read option
