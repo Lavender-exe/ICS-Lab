@@ -10,7 +10,7 @@ Based on the course: [Practical Industrial Control System Penetration Testing](h
 ## Requirements
 
 Minimum:
-- 12gb RAM (Kali: 8GB, Ubuntu Server: 1GB)
+- 12GB RAM (Kali: 8GB, Ubuntu Server: 1GB)
 - 4 Cores (Kali: 2-4 Cores, Ubuntu Server: 1 Core)
 
 ### Attacker
