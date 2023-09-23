@@ -25,9 +25,9 @@ echo ""
 sudo pip install honeypots
 pip install conpot
 sudo pip install python-snap7
-cd ~/.local/lib/python3.10/site-packages/conpot/templates/IEC104/snmp/
+cd $HOME/.local/lib/python3.10/site-packages/conpot/templates/IEC104/snmp/
 rm snmp.xml
-wget https://raw.githubusercontent.com/mushorg/conpot/master/conpot/templates/IEC104/snmp/snmp.xml
+wget https://raw.githubusercontent.com/Lavender-exe/ICS-Lab/main/setup/snmp.xml
 
 echo ""
 echo "${yel}[*] Disabling Firewall${end}"

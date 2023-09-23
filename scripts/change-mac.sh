@@ -2,7 +2,7 @@
 
 echo ""
 echo "Select Interface: "
-ls /sys/class/net
+ls -l /sys/class/net
 read interface
 
 echo ""
@@ -24,7 +24,7 @@ echo """
 siemens_s7="00:1C:06:6B:AB:45"
 gas_station="00:A0:F6:75:56:A1"
 modbus_electric="00:00:54:FE:B7:DB"
-challenge_electric="00:1D:59:FA:A4:D7"
+chronoguard_electric="00:1D:59:FA:A4:D7"
 
 echo ""
 echo "Select Device: "
@@ -33,38 +33,39 @@ read device
 siemens () { 
   sudo macchanger -m $siemens_s7 $interface
   sleep 10
-  sudo systemctl restart NetworkManager 2>/dev/null | sudo systemctl restart networking 2>/dev/null | sudo systemctl restart systemd-networkd 2>/dev/null 
 }
 
 gas () { 
   sudo macchanger -m $gas_station $interface
   sleep 10
-  sudo systemctl restart NetworkManager 2>/dev/null | sudo systemctl restart networking 2>/dev/null | sudo systemctl restart systemd-networkd 2>/dev/null 
 }
 
 modbus () { 
   sudo macchanger -m $modbus_electric $interface
-  sleep 10
-  sudo systemctl restart NetworkManager 2>/dev/null | sudo systemctl restart networking 2>/dev/null | sudo systemctl restart systemd-networkd 2>/dev/null 
+  sleep 10 
 }
 
-challenge () { 
-  sudo macchanger -m $challenge_electric $interface
+chronoguard () { 
+  sudo macchanger -m $chronoguard_electric $interface
   sleep 10
-  sudo systemctl restart NetworkManager 2>/dev/null | sudo systemctl restart networking 2>/dev/null | sudo systemctl restart systemd-networkd 2>/dev/null 
 }
 
 reset () {
   sudo macchanger -p $interface
   sleep 10
-  sudo systemctl restart NetworkManager 2>/dev/null | sudo systemctl restart networking 2>/dev/null | sudo systemctl restart systemd-networkd 2>/dev/null 
+}
+
+restart_net() {
+  sudo systemctl restart NetworkManager 2>/dev/null
+  sudo systemctl restart networking 2>/dev/null
+  sudo systemctl restart systemd-networkd 2>/dev/null 
 }
 
 case $device in
-  1) siemens; exit ;;
-  2) gas; exit ;;
-  3) modbus; exit ;;
-  4) challenge; exit ;;
-  9) reset; exit;;
+  1) siemens; restart_net; exit ;;
+  2) gas; restart_net; exit ;;
+  3) modbus; restart_net; exit ;;
+  4) chronoguard; restart_net; exit ;;
+  9) reset; restart_net; exit;;
   *) echo "Unkown Option" ;;
 esac

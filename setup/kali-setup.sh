@@ -28,7 +28,7 @@ cd /opt/tools/ics
 # Cloning Git Repos
 sudo git clone https://github.com/meeas/plcscan
 sudo git clone https://github.com/tijldeneut/ICSSecurityScripts ics-security-scripts
-sudo git clone https://github.com/digitalbond/Redpoint redpoint
+sudo git clone https://github.com/Lavender-exe/Redpoint redpoint
 
 sudo mkdir modbuspal
 cd modbuspal
