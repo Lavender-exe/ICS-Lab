@@ -1,4 +1,5 @@
-#!/bin/python3
+#!/usr/bin/python3
+
 import snap7
 from time import sleep
 

@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if (( $EUID != 0 )); then
+    echo "[-] Please run as root"
+    exit
+fi
+
 echo """
 [1] Conpot Default - Common Services
 [2] Conpot Guardian AST - Gas Station
@@ -22,7 +27,7 @@ s7_siemens() {
   sudo python3 s7.py | sudo python s7.py
 }
 
-echo "Choose Honeypot"
+echo "Choose Honeypot: "
 read option
 case $option in 
   1) default ;;
