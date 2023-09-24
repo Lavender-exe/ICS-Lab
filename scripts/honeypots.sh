@@ -24,7 +24,7 @@ red_team() {
 }
 
 s7_siemens() {
-  sudo python3 s7.py | sudo python s7.py
+  sudo python3 s7.py
 }
 
 echo "Choose Honeypot: "

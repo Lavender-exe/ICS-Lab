@@ -23,8 +23,8 @@ echo "${yel}[*] Installing Honeypots${end}"
 echo ""
 
 sudo pip install honeypots
-pip install conpot
-sudo pip install python-snap7
+pip install conpot keyboard
+sudo pip install python-snap7 
 cd $HOME/.local/lib/python3.10/site-packages/conpot/templates/IEC104/snmp/
 rm snmp.xml
 wget https://raw.githubusercontent.com/Lavender-exe/ICS-Lab/main/setup/snmp.xml
