@@ -5,6 +5,7 @@ echo """
 [2] Conpot Guardian AST - Gas Station
 [3] Conpot Modbus PLC 1
 [4] Red Team Engagement
+[5] S7 Siemens PLC Server
 """
 
 default() {
@@ -17,6 +18,10 @@ red_team() {
   conpot -f --template IEC104
 }
 
+s7_siemens() {
+  sudo python3 s7.py | sudo python s7.py
+}
+
 echo "Choose Honeypot"
 read option
 case $option in 
@@ -24,5 +29,6 @@ case $option in
   2) guardian_ast ;;
   3) default ;;
   4) red_team ;;
+  5) s7_siemens;;
   *) echo "Invalid Option" ;;
 esac
