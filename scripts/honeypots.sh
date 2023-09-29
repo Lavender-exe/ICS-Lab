@@ -1,10 +1,5 @@
 #!/bin/bash
 
-if (( $EUID != 0 )); then
-    echo "[-] Please run as root"
-    exit
-fi
-
 echo """
 [1] Conpot Default - Common Services
 [2] Conpot Guardian AST - Gas Station
