@@ -1,16 +1,17 @@
 #!/bin/bash
 
-echo ""
-echo "Select Interface: "
-ls -l /sys/class/net
+if (( $EUID != 0 )); then
+    echo "[-] Please run as root"
+    exit
+fi
+
+echo -e "Select Interface: \n"
+ls /sys/class/net
 read interface
 
-echo ""
-echo "Selected Interface: ${interface}"
-echo ""
-echo "Setting ${interface} as DOWN"
+echo -e "Selected Interface: ${interface}\n"
+echo -e "Setting ${interface} as DOWN\n"
 sudo ip link set $interface down
-echo ""
 
 echo """
 [1] Siemens Numerical Control Ltd., Nanjing
@@ -26,8 +27,7 @@ gas_station="00:A0:F6:75:56:A1"
 modbus_electric="00:00:54:FE:B7:DB"
 chronoguard_electric="00:1D:59:FA:A4:D7"
 
-echo ""
-echo "Select Device: "
+echo -e "[i] Select Device: \n"
 read device
 
 siemens () { 

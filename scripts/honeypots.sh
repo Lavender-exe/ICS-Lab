@@ -27,7 +27,7 @@ s7_siemens() {
   sudo python3 s7.py
 }
 
-echo "Choose Honeypot: "
+echo -e "[i] Choose Honeypot: \n"
 read option
 case $option in 
   1) default ;;

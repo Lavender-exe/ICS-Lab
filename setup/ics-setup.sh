@@ -22,7 +22,7 @@ echo ""
 echo "${yel}[*] Installing Honeypots${end}"
 echo ""
 
-sudo pip install honeypots
+sudo pip install honeypots conpot
 pip install conpot 
 sudo pip install python-snap7 
 cd $HOME/.local/lib/python3.10/site-packages/conpot/templates/IEC104/snmp/

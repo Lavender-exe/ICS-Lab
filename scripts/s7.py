@@ -4,7 +4,6 @@ import snap7
 from time import sleep
 
 print("S7 PLC Simulation Server")
-print("Run as root!")
 
 s7 = snap7.server.Server()
 s7.create()
